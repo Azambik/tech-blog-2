@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The tech blog</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="bg-pistachio flex w-100">
+  <div class="wrapper">
+    <header class="bg-brown header padding-custom">
+      <div>
+       <nav>
+        {{#if loggedIn}}
+         <a class="pr-3 text-pistachio" href="/">Home</a>
+        <a class="text-pistachio" href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style text-pistachio">Logout</button>
+        {{else}}
+        <a class="text-pistachio" href="/login">login</a>
+        {{/if}}
+      </nav>
+      <div class="bg-pistachio rounded  text-center">
+      <h1>
+        <a class="text-coco" href="/">THE TECH BLOG</a>
+      </h1>
+      </div>
+      </div>
+    </header>
+    <main class="w-100">
+      {{{ body }}}
+    </main>
+    <footer>
+      Tech blog for techies by techies!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

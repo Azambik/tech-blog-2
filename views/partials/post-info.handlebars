@@ -1,0 +1,16 @@
+<article class="post">
+  <div class="title">
+    <div class="bg-brown pr-3 pl-3">
+    <a class="text-secondary" href="/post/{{id}}">{{title}}</a>
+    <div class="meta float-right text-secondary">
+    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+    |
+    <a class="text-secondary" href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
+    </div>
+    <div class="border-coco">
+    <P class="p-3">{{post_body}}</p>
+    </div>
+  </div>
+  
+</article>
